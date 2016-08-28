@@ -7,11 +7,16 @@
         <title>Register</title>
     </head>
     <body>
-        <h2>
-        Client Information:<br>
-        Name: <%= request.getParameter("name")%><br>
-        eMail: <%= request.getParameter("email")%><br>
-        Forward: <%= request.getParameter("send")%>
-        </h2>
+        <%! String vName;%>
+        <% vName = request.getParameter("name");%>
+        Client information
+        <h2>Name: <%= vName%></h2>
+        <h2>eMail: <%= request.getParameter("email")%></h2>
+        <h2>Forward: <%= request.getParameter("forward")%></h2>
+        <% if (vName.toLowerCase().compareTo("tessier") == 0) { %>
+            Hello Tessier!
+        <%} else { %>
+            I don’t know you.
+        <%}%>
     </body>
 </html>
