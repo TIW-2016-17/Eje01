@@ -7,9 +7,11 @@
         <title>Register</title>
     </head>
     <body>
-        Client Information:
-        <h2>Name: </h2>
-        <h2>eMail: </h2>
-        <h2>Forward: </h2>
+        <h2>
+        Client Information:<br>
+        Name: <%= request.getParameter("name")%><br>
+        eMail: <%= request.getParameter("email")%><br>
+        Forward: <%= request.getParameter("send")%>
+        </h2>
     </body>
 </html>
